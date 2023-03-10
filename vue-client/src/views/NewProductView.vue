@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
   <div>
+=======
+<div>
+>>>>>>> 24e2f2db1f35e948fcfb552ea99dbad390a68fb2
   <header class="bg-dark py-3">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
@@ -116,7 +120,11 @@
       </section>
     </div>
   </div>
+<<<<<<< HEAD
   </template>
+=======
+</template>
+>>>>>>> 24e2f2db1f35e948fcfb552ea99dbad390a68fb2
 
 <script>
 export default {
