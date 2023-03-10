@@ -1,5 +1,5 @@
 <template>
-  <div>
+<div>
   <header class="bg-dark py-3">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
@@ -7,9 +7,9 @@
                 <p class="lead fw-normal text-white-50 mb-0">Complete the form below</p>
             </div>
         </div>
-    </header>
-    <div class="sportEvent-add">
-      <!-- Section-->
+  </header>
+  <div class="sportEvent-add">
+    <!-- Section-->
       <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
           <div
@@ -22,8 +22,8 @@
           >
             <div class="col-sm-12">
               <div class="needs-validation" novalidate>
-                <div class="row g-2">
-                  <div v-if=!submitted>
+              <div class="row g-2">
+                <div v-if=!submitted>
                   <div class="col-12">
                     <label for="eventName" class="form-label"
                       >Event Name</label
@@ -114,9 +114,9 @@
           </div>
         </div>
       </section>
-    </div>
   </div>
-  </template>
+</div>
+</template>
 
 <script>
 export default {
