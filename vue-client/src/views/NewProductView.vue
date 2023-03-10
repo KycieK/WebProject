@@ -1,4 +1,5 @@
 <template>
+  <div>
   <header class="bg-dark py-3">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
@@ -114,6 +115,7 @@
         </div>
       </section>
     </div>
+  </div>
   </template>
 
 <script>
