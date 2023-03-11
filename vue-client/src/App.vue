@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="d-flex justify-content-center border-top">
-          <p class="py-4 text-muted">© 2023 Company, Inc. All rights reserved.</p>
+          <p class="py-4 text-muted">© 2023 ZOZO, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
