@@ -8,7 +8,8 @@
             </div>
         </div>
     </header>
-    <div class="container py-4 px-lg-5">
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5">
       <h2 class="py-4">About this Website</h2>
       <p class="py-2">(Faut rajouter du blablabla ici)</p>
       <h2 class="py-4">About the team</h2>
@@ -32,5 +33,6 @@
         </div>
       </div>
     </div>
+    </section>
   </div>
 </template>
