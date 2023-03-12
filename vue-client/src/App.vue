@@ -73,7 +73,6 @@
 
 <script>
 import Sidebar from './components/SideBar.vue'
-import product from '@/product.json'
 export default {
   components: {
     Sidebar
@@ -81,18 +80,12 @@ export default {
   data () {
     return {
       showSideBar: false,
-      inventory: product,
       cart: {}
     }
   },
   methods: {
     toggleSideBar () {
       this.showSideBar = !this.showSideBar
-    },
-    addToCart (product, index) {
-      if (!this.cart[product]) this.cart[product] = 0
-      this.cart[product] += this.inventory[index].quantity
-      console.log(this.cart[product])
     },
     removeItem (name) {
       delete this.cart[name]
