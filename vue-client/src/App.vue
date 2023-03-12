@@ -51,20 +51,20 @@
         <div class="col-mb3">
             <h5>Quick Links</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2 text-muted">Home</li>
-                <li class="nav-item mb-2 text-muted">About Us</li>
-                <li class="nav-item mb-2 text-muted">Calendar</li>
+                <li><a class="nav-item mb-2 text-muted" href="/">Home</a></li>
+                <li><a class="nav-item mb-2 text-muted" href="/about">About Us</a></li>
+                <li><a class="nav-item mb-2 text-muted" href="#!">Calendar</a></li>
             </ul>
         </div>
         <div class="col-mb3">
             <h5>Events</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2 text-muted">Create New Event</li>
+              <li><a class="nav-item mb-2 text-muted" href="/new-product">Create New Event</a></li>
             </ul>
         </div>
       </div>
       <div class="d-flex justify-content-center border-top">
-          <p class="py-4 text-muted">© 2023 ZOZO, Inc. All rights reserved.</p>
+          <p class="py-4 text-muted">© 2023 ZOZO Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
