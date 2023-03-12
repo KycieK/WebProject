@@ -10,6 +10,11 @@
             </h1>
             <div class="cart-body">
             <table class="cart-table">
+              <thead>
+                <tr>
+                    <th><span>Events you joined :</span></th>
+                </tr>
+                </thead>
                 <tbody>
                 <tr v-for="(quantity, key, i) in cart" :key="i">
                     <td>
@@ -28,7 +33,7 @@
 
 <script>
 export default {
-  props: ['toggle', 'cart', 'inventory', 'remove'],
+  props: ['toggle', 'cart', 'remove'],
   methods: {
     getPrice (name) {
       const product = this.inventory.find((p) => {
