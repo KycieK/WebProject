@@ -17,7 +17,7 @@
                   <li class="dropdown-item"><a class="nav-link" href="#!">Link 3</a></li>
               </ul>
           </li>
-          <li class="nav-item"><router-link class="nav-link" to="/new-product">New Event</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/new-event">New Event</router-link></li>
           <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
         </ul>
         <form class="d-flex">
@@ -59,7 +59,7 @@
         <div class="col-mb3">
             <h5>Events</h5>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="text-decoration-none text-muted" href="/new-product">Create New Event</a></li>
+              <li class="nav-item"><a class="text-decoration-none text-muted" href="/new-event">Create New Event</a></li>
             </ul>
         </div>
       </div>
