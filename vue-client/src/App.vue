@@ -8,7 +8,6 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item"><router-link class="nav-link active" aria-current="page" to="/">Home</router-link></li>
-          <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calendar</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -19,6 +18,7 @@
               </ul>
           </li>
           <li class="nav-item"><router-link class="nav-link" to="/new-product">New Event</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
         </ul>
         <form class="d-flex">
             <button class="btn btn-outline-dark" type="button" v-on:click="toggleSideBar">
@@ -52,8 +52,8 @@
             <h5>Quick Links</h5>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="text-decoration-none text-muted" href="/">Home</a></li>
-                <li class="nav-item"><a class="text-decoration-none text-muted" href="/about">About Us</a></li>
                 <li class="nav-item"><a class="text-decoration-none text-muted" href="/calendar">Calendar</a></li>
+                <li class="nav-item"><a class="text-decoration-none text-muted" href="/about">About Us</a></li>
             </ul>
         </div>
         <div class="col-mb3">
