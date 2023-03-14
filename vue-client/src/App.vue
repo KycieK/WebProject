@@ -3,7 +3,7 @@
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="/">ZOZO</a>
+      <a class="navbar-brand " href="/"><img class="rounded-circle" height="100" src="./assets/images/logo-nav.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -43,8 +43,8 @@
   <footer class="bg-dark text-white">
     <div class="container py-1 px-lg-5">
       <div class="py-4 row row-cols-md-4">
-        <div class="col-mb3">
-            <h5>Logo</h5>
+        <div class="col-mb3 px-lg-5">
+          <img class="rounded" height="200" src="./assets/images/logo-footer.png">
         </div>
         <div class="col-mb3">
         </div>
