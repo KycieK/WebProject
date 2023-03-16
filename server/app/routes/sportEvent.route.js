@@ -1,5 +1,5 @@
 module.exports = app => {
-    const sportevent = require('../controllers/sportEvent.constroller.js')
+    const sportevent = require('../controllers/sportEvent.controller.js')
     const router = require('express').Router()
 
     router.get('/', sportevent.findAll)

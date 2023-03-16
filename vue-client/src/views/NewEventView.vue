@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-12">
                     <label for="AmountofPlayers" class="Max"
-                      >Enter the maximum amount of participant</label
+                      >Enter the maximum amount of participants</label
                     >
                     <input
                       type="number"
@@ -119,8 +119,9 @@
 </template>
 
 <script>
+import EventDataService from '@/services/EventDataService'
 export default {
-  props: ['addInv'],
+  props: ['addInv', 'user'],
   data () {
     return {
       submitted: false,
@@ -135,9 +136,13 @@ export default {
   },
   methods: {
     saveSportEvent () {
-      this.addInv(this.sportEvent)
-      console.log(this.sportEvent)
-      this.submitted = true
+      EventDataService.create(this.sportevent)
+        .then(response => {
+          this.product.id = response.data.id
+          this.addInv(this.product)
+          // console.log(this.product)
+          this.submitted = true
+        })
     },
     newSportEvent () {
       this.submitted = false

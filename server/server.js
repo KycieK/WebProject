@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 //router
 require('./app/routes/sportEvent.route')(app)
-require('./app/routes/user.route')(app)
+
 const PORT = 8080
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
