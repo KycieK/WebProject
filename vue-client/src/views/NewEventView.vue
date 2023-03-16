@@ -81,9 +81,6 @@
                       <option value="Basketball">Basketball</option>
                       <option value="Rugby">Rugby</option>
                     </select>
-                    <div class="invalid-feedback">
-                      Valid photo path is required.
-                    </div>
                     <div class="col-12">
                     <label for="AmountofPlayers" class="Max"
                       >Enter the maximum amount of participants</label
@@ -137,11 +134,10 @@ export default {
   methods: {
     saveSportEvent () {
       console.log('you are in saveSportEvent')
+      console.log(this.sportEvent)
       EventDataService.create(this.sportEvent)
         .then(response => {
           this.sportEvent.id = response.data.id
-          this.addInv(this.sportEvent)
-          // console.log(this.sportEvent)
           this.submitted = true
         })
     },
