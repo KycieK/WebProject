@@ -136,6 +136,7 @@ export default {
   },
   methods: {
     saveSportEvent () {
+      console.log('you are in saveSportEvent')
       EventDataService.create(this.sportEvent)
         .then(response => {
           this.sportEvent.id = response.data.id

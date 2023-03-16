@@ -1,16 +1,16 @@
 module.exports = app => {
-    const sportevent = require('../controllers/sportEvent.controller.js')
+    const sportEvent = require('../controllers/sportEvent.controller.js')
     const router = require('express').Router()
 
-    router.get('/', sportevent.findAll)
+    router.get('/', sportEvent.findAll)
 
-    router.post('/', sportevent.create)
+    router.post('/', sportEvent.create)
 
-    router.get('/:id', sportevent.findOne)
+    router.get('/:id', sportEvent.findOne)
 
-    router.delete('/:id', sportevent.delete)
+    router.delete('/:id', sportEvent.delete)
 
-    router.put('/:id', sportevent.update)
+    router.put('/:id', sportEvent.update)
 
     app.use('/api/sportevent', router)
 }

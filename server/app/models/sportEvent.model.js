@@ -1,5 +1,5 @@
 module.exports = (connex, Sequelize) => {
-    const sportEvent = connex.define("sportevent", {
+    const sportEvent = connex.define("sportevents", {
         name: {
             type: Sequelize.STRING
         },

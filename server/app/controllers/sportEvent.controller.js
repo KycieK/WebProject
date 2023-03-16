@@ -1,5 +1,5 @@
 const db = require("../models")
-const sportEvent = db.events
+const sportEvent = db.sportEvents
 const OP = db.Sequelize.Op
 
 exports.findAll = (req, res) => {
