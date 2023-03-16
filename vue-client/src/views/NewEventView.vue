@@ -136,11 +136,11 @@ export default {
   },
   methods: {
     saveSportEvent () {
-      EventDataService.create(this.sportevent)
+      EventDataService.create(this.sportEvent)
         .then(response => {
-          this.product.id = response.data.id
-          this.addInv(this.product)
-          // console.log(this.product)
+          this.sportEvent.id = response.data.id
+          this.addInv(this.sportEvent)
+          // console.log(this.sportEvent)
           this.submitted = true
         })
     },
