@@ -40,6 +40,11 @@ const routes = [
     component: EventEditView
   },
   {
+    path: '/user',
+    name: 'user',
+    component: UserView
+  },
+  {
     path: '/calendar',
     name: 'calendar',
     component: CalendarView

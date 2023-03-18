@@ -73,6 +73,10 @@
 
 <script>
 import Sidebar from './components/SideBar.vue'
+import EventDataService from '@/services/ProductDataService'
+import UserDataService from '@/services/UserDataService'
+import { mapGetters } from 'vuex'
+
 export default {
   components: {
     Sidebar
@@ -89,14 +93,28 @@ export default {
     },
     removeItem (name) {
       delete this.cart[name]
-    }
+    },
+    logout () {
+      UserDataService.getLogout()
+        .then(response => {
+          localStorage.removeItem('token')
+          this.$store.dispatch('user', null)
+          this.$router.push('login')
+        })
+    },
   },
   computed: {
-    totalQuantity () {
-      return Object.values(this.cart).reduce((acc, curr) => {
-        return acc + curr
-      }, 0)
-    }
+    ...mapGetters(['user'])
+  },
+  created () {
+    UserDataService.getAuth()
+      .then(response => {
+        this.name = response.data.fullname
+        this.$store.dispatch('user', response.data)
+      })
+      .catch(e => {
+        this.$store.dispatch('user', null)
+      })
   }
 }
 </script>
