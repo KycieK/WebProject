@@ -74,7 +74,6 @@
 <script>
 import Sidebar from './components/SideBar.vue'
 import UserDataService from '@/services/UserDataService'
-import { mapGetters } from './vuex'
 
 export default {
   components: {
@@ -102,9 +101,7 @@ export default {
         })
     }
   },
-  computed: {
-    ...mapGetters(['user'])
-  },
+  //  computed:{},
   created () {
     UserDataService.getAuth()
       .then(response => {
