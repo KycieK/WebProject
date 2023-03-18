@@ -16,41 +16,35 @@
             <label for="password">Password</label>
             <input type="password" class="form-control mb-3" id="password" placeholder="Enter password" v-model="user.password">
           </div>
-           <button class="w-100 btn btn-secondary btn-lg mt-3" type="button"  @click="saveUser">Save </button>
+           <button class="w-100 btn btn-secondary btn-lg mt-3" type="button"  @click="saveUser">Save</button>
             <hr class="my-4">
        </div>
      </div>
     </div>
   </template>
-  
-  <script>
-  import UserDataService from '@/services/UserDataService'
-  
-  export default {
-    data () {
-      return {
-        message: null,
-        user: {
-          email: '',
-          password: '',
-          fullname: ''
-        }
-      }
-    },
-    methods: {
-      saveUser () {
-        UserDataService.create(this.user)
-          .then(response => {
-            // console.log(response.data)
-            this.$router.push({ name: 'login' })
-          })
-          .catch(error => {
-            // Handle the error here
-            // console.log(error.response.data.message)
-            this.message = error.response.data.message
-          })
+<script>
+import UserDataService from '@/services/UserDataService'
+export default {
+  data () {
+    return {
+      message: null,
+      user: {
+        email: '',
+        password: '',
+        fullname: ''
       }
     }
+  },
+  methods: {
+    saveUser () {
+      UserDataService.create(this.user)
+        .then(response => {
+          this.$router.push({ name: 'login' })
+        })
+        .catch(error => {
+          this.message = error.response.data.message
+        })
+    }
   }
-  </script>
-  
+}
+</script>

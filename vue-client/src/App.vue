@@ -73,9 +73,8 @@
 
 <script>
 import Sidebar from './components/SideBar.vue'
-import EventDataService from '@/services/ProductDataService'
 import UserDataService from '@/services/UserDataService'
-import { mapGetters } from 'vuex'
+import { mapGetters } from './vuex'
 
 export default {
   components: {
@@ -101,7 +100,7 @@ export default {
           this.$store.dispatch('user', null)
           this.$router.push('login')
         })
-    },
+    }
   },
   computed: {
     ...mapGetters(['user'])
