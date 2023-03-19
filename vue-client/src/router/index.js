@@ -6,6 +6,7 @@ import EventEditView from '@/views/EventEditView.vue'
 import CalendarView from '@/views/CalendarView.vue'
 import NewEventView from '../views/NewEventView.vue'
 import UserView from '../views/UserView.vue'
+import LoginView from '../views/LoginView.vue'
 
 const routes = [
   {
@@ -40,6 +41,11 @@ const routes = [
     path: '/user',
     name: 'user',
     component: UserView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   },
   {
     path: '/calendar',

@@ -17,37 +17,34 @@
        </div>
      </div>
     </div>
-  </template>
-  
-  <script>
-  import UserDataService from '@/services/UserDataService'
-  
-  export default {
-    data () {
-      return {
-        message: null,
-        user: {
-          email: '',
-          password: ''
-        }
-      }
-    },
-    methods: {
-      login () {
-        UserDataService.postLogin(this.user)
-          .then(response => {
-            console.log(response.data)
-            // localStorage.setItem('token', response.data.token)
-            this.$store.dispatch('user', response.data.user)
-            this.$router.push({ name: 'home' })
-          })
-          .catch(error => {
-            // Handle the error here
-            this.message = error.response.data.message
-            // console.log(error.response.data.body.message)
-          })
+</template>
+<script>
+import UserDataService from '@/services/UserDataService'
+export default {
+  data () {
+    return {
+      message: null,
+      user: {
+        email: '',
+        password: ''
       }
     }
+  },
+  methods: {
+    login () {
+      UserDataService.postLogin(this.user)
+        .then(response => {
+          console.log(response.data)
+          // localStorage.setItem('token', response.data.token)
+          this.$store.dispatch('user', response.data.user)
+          this.$router.push({ name: 'home' })
+        })
+        .catch(error => {
+          // Handle the error here
+          this.message = error.response.data.message
+          // console.log(error.response.data.body.message)
+        })
+    }
   }
-  </script>
-  
+}
+</script>

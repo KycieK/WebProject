@@ -89,6 +89,13 @@ export default {
     toggleSideBar () {
       this.showSideBar = !this.showSideBar
     },
+    userConnect () {
+      if (this.$store.state.user === null) {
+        this.$router.push('login')
+      } else {
+        this.toggleSideBar()
+      }
+    },
     removeItem (name) {
       delete this.cart[name]
     },
