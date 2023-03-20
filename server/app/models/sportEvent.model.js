@@ -6,6 +6,9 @@ module.exports = (connex, Sequelize) => {
         preciseDate: {
             type: Sequelize.DATE
         },
+        duration: {
+            type: Sequelize.INTEGER
+        },
         eventDescription: {
             type: Sequelize.TEXT
         },

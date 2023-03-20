@@ -64,6 +64,19 @@
                     <div class="invalid-feedback">Valid description</div>
                   </div>
                   <div class="col-12">
+                    <label for="AmountofPlayers" class="Max"
+                      >Duration of the event in hours</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="AmountofPlayers"
+                      v-model="sportEvent.duration"
+                      placeholder="0"
+                      min = "0"
+                    />
+                  </div>
+                  <div class="col-12">
                     <label for="sportType" class="form-label"
                       >Sport Type</label
                     >
@@ -81,7 +94,8 @@
                       <option value="Basketball">Basketball</option>
                       <option value="Rugby">Rugby</option>
                     </select>
-                    <div class="col-12">
+                  </div>
+                  <div class="col-12">
                     <label for="AmountofPlayers" class="Max"
                       >Enter the maximum amount of participants</label
                     >
@@ -93,7 +107,6 @@
                       placeholder="0"
                       min = "0"
                     />
-                  </div>
                   </div>
                   <button class="w-100 btn btn-secondary btn-lg mt-3" type="button"  @click="saveSportEvent()">Save </button>
                   </div>
@@ -127,7 +140,8 @@ export default {
         preciseDate: '',
         eventDescription: '',
         sportType: '',
-        maxAmountofPlayer: ''
+        maxAmountofPlayer: '',
+        duration: ''
       }
     }
   },
