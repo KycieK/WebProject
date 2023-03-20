@@ -43,7 +43,7 @@
                       >Date of the event</label
                     >
                     <input
-                      type="date"
+                      type="datetime-local"
                       class="form-control"
                       id="eventDate"
                       v-model="sportEvent.preciseDate"
