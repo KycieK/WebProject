@@ -17,6 +17,9 @@
                   <li class="dropdown-item"><a class="nav-link" href="#!">Link 3</a></li>
               </ul>
           </li>
+          <li class="nav-item " v-if="!user"><router-link class="nav-link" to="/user">Register</router-link></li>
+          <li class="nav-item " v-if="!user"><router-link class="nav-link" to="/login">Login</router-link></li>
+          <li class="nav-item " v-if="user"><span class="nav-link" @click="logout" style="cursor:pointer">Logout</span></li>
           <li class="nav-item"><router-link class="nav-link" to="/new-event">New Event</router-link></li>
           <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
         </ul>
@@ -29,8 +32,7 @@
     </div>
   </nav>
   <router-view
-  :inventory = "inventory"
-  :addToCart = "addToCart"
+  :user = "user"
   />
   <Sidebar
   v-if="showSideBar"
@@ -90,8 +92,8 @@ export default {
       this.showSideBar = !this.showSideBar
     },
     userConnect () {
-      if (this.$store.state.user === null) {
-        this.$router.push('login')
+      if (this.user) {
+        this.$router.push('/login')
       } else {
         this.toggleSideBar()
       }
