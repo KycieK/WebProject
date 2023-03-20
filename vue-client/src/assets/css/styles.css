@@ -2546,7 +2546,7 @@ textarea.form-control-lg {
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;
@@ -11736,17 +11736,40 @@ fieldset:disabled .btn {
   margin-bottom: 15px;
 }
 
-.football {background-color: #f0fff1;color: #81d58b;}
+.football {
+  background-color: rgba(253, 156, 66, 0.9);
+  border: 1px solid rgb(233, 136, 46);
+  color: #fff;
+}
 
-.basketball {background-color: #f0f6ff;color: #689bee;}
+.basketball {
+  background-color: rgba(255, 102, 102, 0.9);
+  border: 1px solid rgb(235, 82, 82);
+  color: #fff;}
 
-.tennis {background-color: #fcf0ff;color: #d168ee;}
+.volleyball {
+    background-color: rgba(102, 204, 102, 0.9);
+    border: 1px solid rgb(82, 184, 82);
+    color: #333;
+}
 
-.volleyball {background-color: #fff0f0;color: #f58b8b;}
+.tennis {
+    background-color: rgba(0, 255, 255, 0.9);
+    border: 1px solid rgb(0, 235, 235);
+    color: #333;
+}
 
-.hockey {background-color: #fff0f0;color: #f58b8b;}
+.hockey {
+    background-color: rgba(255, 153, 255, 0.9);
+    border: 1px solid rgb(235, 133, 235);
+    color: #333;
+}
 
-.rugby {background-color: #fff0f0;color: #f58b8b;}
+.rugby {
+    background-color: rgba(153, 102, 255, 0.9);
+    border: 1px solid rgb(133, 82, 235);
+    color: #333;
+}
 
 .closed {
   background:
@@ -11760,3 +11783,5 @@ fieldset:disabled .btn {
     );
   color: #f6984c;
 }
+
+.vuecal__event {cursor: pointer;}
