@@ -11735,3 +11735,28 @@ fieldset:disabled .btn {
   margin: 0 auto;
   margin-bottom: 15px;
 }
+
+.football {background-color: #f0fff1;color: #81d58b;}
+
+.basketball {background-color: #f0f6ff;color: #689bee;}
+
+.tennis {background-color: #fcf0ff;color: #d168ee;}
+
+.volleyball {background-color: #fff0f0;color: #f58b8b;}
+
+.hockey {background-color: #fff0f0;color: #f58b8b;}
+
+.rugby {background-color: #fff0f0;color: #f58b8b;}
+
+.closed {
+  background:
+    #fff7f0
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 162, 87, 0.25),
+      rgba(255, 162, 87, 0.25) 5px,
+      rgba(255, 255, 255, 0) 5px,
+      rgba(255, 255, 255, 0) 15px
+    );
+  color: #f6984c;
+}

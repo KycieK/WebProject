@@ -38,7 +38,7 @@ export default {
           title: 'Sample Event',
           start: new Date(2023, 3, 5, 10, 0),
           end: new Date(2023, 3, 5, 12, 0),
-          class: 'custom-event-class'
+          class: 'football'
         }
       ]
     }
