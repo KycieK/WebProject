@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="font-family:monospace;">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C5663;">
     <div class="container px-4 px-lg-5">
@@ -10,7 +10,7 @@
           <li class="nav-item"><router-link class="nav-link active" aria-current="page" to="/">Home</router-link></li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calendar</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2C5663;">
                   <li class="dropdown-item"><router-link class="nav-link" to="/calendar">Go to Calendar</router-link></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li class="dropdown-item"><a class="nav-link" href="#!">Link 2</a></li>
