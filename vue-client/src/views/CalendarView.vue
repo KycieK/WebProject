@@ -9,6 +9,7 @@
         </div>
       </div>
     </header>
+    <!-- Page Content-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5 justify-content-between">
         <div class="container border">
@@ -18,18 +19,25 @@
           :time-to="23 * 60"
           :events="events"
           :on-event-click="onEventClick"
+          :special-hours="specialHours"
           events-on-month-view="short"
           class="vuecal--blue-theme"
           style="height: 750px"
           />
-          <span>{{ selectedEvent.title }} /</span>
-          <strong>{{ selectedEvent.start && selectedEvent.start.format('DD/MM/YYYY') }}</strong>
-          <p v-html="selectedEvent.contentFull" />
-          <strong>Event details:</strong>
-          <ul>
-            <li>Event starts at: {{ selectedEvent.start && selectedEvent.start.formatTime() }}</li>
-            <li>Event ends at: {{ selectedEvent.end && selectedEvent.end.formatTime() }}</li>
-          </ul>
+          <div v-if="showDialog" class="dialog">
+            <button class="close" @click="showDialog = false">X</button>
+            <h2>Event details</h2>
+            <div class="event-details">
+              <span>{{ selectedEvent.title }} /</span>
+              <strong>{{ selectedEvent.start && selectedEvent.start.format('DD/MM/YYYY') }}</strong>
+              <p v-html="selectedEvent.contentFull" />
+              <strong>Event details:</strong>
+              <ul>
+                <li>Event starts at: {{ selectedEvent.start && selectedEvent.start.formatTime() }}</li>
+                <li>Event ends at: {{ selectedEvent.end && selectedEvent.end.formatTime() }}</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -49,7 +57,15 @@ export default {
     return {
       selectedEvent: {},
       showDialog: false,
-      events: []
+      events: [],
+      specialHours: {
+        7: {
+          from: 7 * 60,
+          to: 23 * 60,
+          class: 'closed',
+          label: 'Closed'
+        }
+      }
     }
   },
   methods: {
@@ -63,17 +79,51 @@ export default {
   },
   async created () {
     try {
-      console.log('Fetching events...')
       const response = await axios.get('http://localhost:8080/api/sportevent')
-      console.log('Events fetched:', response.data)
-      this.events = response.data.map((event) => ({
-        name: event.name,
-        start: new Date(event.preciseDate),
-        end: new Date(event.end),
-        class: event.class,
-        content: event.content,
-        contentFull: event.contentFull
-      }))
+      this.events = response.data.map((event) => {
+        const startDate = new Date(event.preciseDate)
+        const endDate = new Date(startDate)
+        let icon = ''
+        endDate.setMinutes(startDate.getMinutes() + event.duration * 60)
+        // Initialize the object class based on the event type with a switch case.
+        switch (event.sportType) {
+          case 'Football':
+            event.class = 'football'
+            icon = '<i class="fa-solid fa-futbol"></i>'
+            break
+          case 'Basketball':
+            event.class = 'basketball'
+            icon = '<i class="fa-solid fa-basketball"></i>'
+            break
+          case 'Tennis':
+            event.class = 'tennis'
+            icon = '<i class="fa-solid fa-table-tennis-paddle-ball"></i>'
+            break
+          case 'Volleyball':
+            event.class = 'volleyball'
+            icon = '<i class="fa-solid fa-volleyball"></i>'
+            break
+          case 'Hockey':
+            event.class = 'hockey'
+            icon = '<i class="fa-solid fa-hockey-puck"></i>'
+            break
+          case 'Rugby':
+            event.class = 'rugby'
+            icon = '<i class="fa-solid fa-rugby-ball"></i>'
+            break
+          default:
+            event.class = 'other'
+        }
+
+        return {
+          title: event.name,
+          start: startDate,
+          end: endDate,
+          class: event.class,
+          content: icon,
+          max: event.maxAmountofPlayer
+        }
+      })
       console.log(this.events)
     } catch (error) {
       console.error('Error fetching events:', error)
