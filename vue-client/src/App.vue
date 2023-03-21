@@ -8,15 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item"><router-link class="nav-link active" aria-current="page" to="/">Home</router-link></li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calendar</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #2C5663;">
-                  <li class="dropdown-item"><router-link class="nav-link" to="/calendar">Go to Calendar</router-link></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li class="dropdown-item"><a class="nav-link" href="#!">Link 2</a></li>
-                  <li class="dropdown-item"><a class="nav-link" href="#!">Link 3</a></li>
-              </ul>
-          </li>
+          <li class="nav-item"><router-link class="nav-link" to="/calendar">Calendar</router-link></li>
           <li class="nav-item"><router-link class="nav-link" to="/new-event">New Event</router-link></li>
           <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
           <li class="nav-item " v-if="!user"><router-link class="nav-link" to="/user">Register</router-link></li>
