@@ -8,7 +8,7 @@
             </div>
         </div>
     </header>
-    <section class="py-5">
+    <section class="py-5" style="background-color: #E0F1F5;">
       <div class="container px-4 px-lg-5 mt-5">
       <h2 class="py-4">About this Website</h2>
       <p class="py-2">Our website is an online calendar to register for sports events. A user can see events created and register for these or create a new event.</p>

@@ -1,7 +1,7 @@
 <template>
 <div>
   <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C5663;">
     <div class="container px-4 px-lg-5">
       <a class="navbar-brand " href="/"><img class="rounded-circle" height="100" src="./assets/images/logo-nav.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -17,14 +17,14 @@
                   <li class="dropdown-item"><a class="nav-link" href="#!">Link 3</a></li>
               </ul>
           </li>
+          <li class="nav-item"><router-link class="nav-link" to="/new-event">New Event</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
           <li class="nav-item " v-if="!user"><router-link class="nav-link" to="/user">Register</router-link></li>
           <li class="nav-item " v-if="!user"><router-link class="nav-link" to="/login">Login</router-link></li>
           <li class="nav-item " v-if="user"><span class="nav-link" @click="logout" style="cursor:pointer">Logout</span></li>
-          <li class="nav-item"><router-link class="nav-link" to="/new-event">New Event</router-link></li>
-          <li class="nav-item"><router-link class="nav-link" to="/about">About Us</router-link></li>
         </ul>
         <form class="d-flex">
-            <button class="btn btn-outline-dark" type="button" v-on:click="toggleSideBar">
+            <button class="btn btn-outline-light" type="button" v-on:click="toggleSideBar">
                 Account
             </button>
         </form>
@@ -42,7 +42,7 @@
   :remove = "removeItem"
   />
   <!-- Footer -->
-  <footer class="bg-dark text-white">
+  <footer class="text-white" style="background-color: #2C5663;">
     <div class="container py-1 px-lg-5">
       <div class="py-4 row row-cols-md-4">
         <div class="col-mb3 px-lg-5">
@@ -51,22 +51,22 @@
         <div class="col-mb3">
         </div>
         <div class="col-mb3">
-            <h5>Quick Links</h5>
+            <h5 class="fw-bold">Quick Links</h5>
             <ul class="nav flex-column">
-                <li class="nav-item"><a class="text-decoration-none text-muted" href="/">Home</a></li>
-                <li class="nav-item"><a class="text-decoration-none text-muted" href="/calendar">Calendar</a></li>
-                <li class="nav-item"><a class="text-decoration-none text-muted" href="/about">About Us</a></li>
+                <li class="nav-item"><a class="text-decoration-none text-white" href="/">Home</a></li>
+                <li class="nav-item"><a class="text-decoration-none text-white" href="/calendar">Calendar</a></li>
+                <li class="nav-item"><a class="text-decoration-none text-white" href="/about">About Us</a></li>
             </ul>
         </div>
         <div class="col-mb3">
-            <h5>Events</h5>
+            <h5 class="fw-bold">Events</h5>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="text-decoration-none text-muted" href="/new-event">Create New Event</a></li>
+              <li class="nav-item"><a class="text-decoration-none text-white" href="/new-event">Create New Event</a></li>
             </ul>
         </div>
       </div>
       <div class="d-flex justify-content-center border-top">
-          <p class="py-4 text-muted">© 2023 ZOZO Inc. All rights reserved.</p>
+          <p class="py-4 text-white">© 2023 ZOZO Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>

@@ -10,9 +10,9 @@
       </div>
     </header>
     <!-- Page Content-->
-    <section class="py-5">
+    <section class="py-5" style="background-color: #E0F1F5;">
       <div class="container px-4 px-lg-5 mt-5 justify-content-between">
-        <div class="container border">
+        <div class="container border" style="background-color: white;">
           <vue-cal
           :disable-views="['years', 'year']"
           :time-from="8 * 60"

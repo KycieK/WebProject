@@ -10,7 +10,7 @@
   </header>
   <div class="sportEvent-add">
     <!-- Section-->
-      <section class="py-5">
+      <section class="py-5" style="background-color: #E0F1F5;">
         <div class="container px-4 px-lg-5 mt-5">
           <div
             class="
